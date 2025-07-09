@@ -14,7 +14,7 @@
         <?php 
           if (isset($_GET['id_paciente'])) {
             // Conexión a la base de datos
-            $conexion = mysqli_connect(getenv('MYSQL_HOST'), getenv('MYSQL_USER'), getenv('MYSQL_PASSWORD'), "practica");
+            $conexion = mysqli_connect(getenv('35.238.38.29'), getenv('karen'), getenv('123456'), "practica");
             if ($conexion) {
               $id_paciente = $_GET['id_paciente'];
               $cadenaSQL = "SELECT nombres FROM Pacientes WHERE id_paciente = $id_paciente";
@@ -40,7 +40,7 @@
     <?php
     if (isset($_GET['id_paciente'])) {
       // Mostrar los datos del paciente seleccionado
-      $conexion = mysqli_connect(getenv('MYSQL_HOST'), getenv('MYSQL_USER'), getenv('MYSQL_PASSWORD'), "practica");
+      $conexion = mysqli_connect(getenv('35.238.38.29'), getenv('karen'), getenv('123456'), "practica");
 
       if ($conexion) {
         $id_paciente = $_GET['id_paciente'];
@@ -77,7 +77,7 @@
       }
     } else {
       // Mostrar lista de pacientes con enlaces para ver detalles
-      $conexion = mysqli_connect(getenv('MYSQL_HOST'), getenv('MYSQL_USER'), getenv('MYSQL_PASSWORD'), "practica");
+      $conexion = mysqli_connect(getenv('35.238.38.29'), getenv('karen'), getenv('123456'), "practica");
 
       if ($conexion) {
         $cadenaSQL = "SELECT id_paciente, nombres FROM Pacientes";
